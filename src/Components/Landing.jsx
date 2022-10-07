@@ -18,7 +18,7 @@ function Landing() {
         <button className="btn btn-secondary">Shop Now</button>
       </div>
       <div className="img-sofa m-1">
-        <img src={sofa} height="500px" wid borderth="500px" alt="sofa.png" srcset="" />
+        <img src={sofa} height="500px" width="500px" alt="sofa.png" srcset="" />
       </div>
     </header>
   );
