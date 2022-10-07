@@ -1,10 +1,13 @@
 import './App.css';
+import Nav from './Components/Nav';
+import Landing from './Components/Landing';
 
 function App() {
   return (
-    <div>
-      <h1>Hello world</h1>
-    </div>
+    <>
+      <Nav/>
+      <Landing/>
+    </>
   );
 }
 

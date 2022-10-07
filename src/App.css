@@ -1,38 +1,90 @@
-.App {
-  text-align: center;
+:root {
+  --PRIMARY-COLOR: #0d0e43;
+  --SECONDARY-COLOR: #fb2e86;
+  --COLOR-SECONDARY-BG: #f5e1fc;
+  --COLOR-TEXT: #8a8fb9;
+  --COLOR-BACKGROUND: #f2f0ff;
+  --COLOR-BORDER: #e7e6ef;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.border {
+  border: solid 2px red;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border- borderbox;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* NavBar */
+nav {
   display: flex;
-  flex-direction: column;
+  justify-content: space-around;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  color: var(--PRIMARY-COLOR);
 }
 
-.App-link {
-  color: #61dafb;
+.nav-items ul {
+  list-style: none;
+  padding: 0;
+  width: 500px;
+}
+.nav-pills:hover {
+  color: var(--SECONDARY-COLOR);
+  cursor: pointer;
+}
+.nav-head h1 {
+  font-family: Josefin Sans;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.search-container input {
+  margin: 0;
+  border-radius: 0;
+  border: 1px solid var(--COLOR-BORDER);
+  height: 35px;
+}
+.search-container button {
+  height: 37px;
+  width: 50px;
+  border: 1px solid var(--COLOR-BORDER);
+  background-color: var(--SECONDARY-COLOR);
+  color: var(--COLOR-BORDER);
+}
+
+/* landing page */
+header {
+  background-color: var(--COLOR-BACKGROUND);
+
+}
+.img-sofa {
+  background-color: var(--COLOR-SECONDARY-BG);
+  border-radius: 50% 50%;
+}
+.header-text {
+  width: 100%;
+  margin-top: 200px;
+}
+.header-text h2 {
+  font-size: 38px;
+  margin-bottom: -1rem;
+  padding-bottom: 10px;
+}
+.header-text h4 {
+  color: var(--SECONDARY-COLOR);
+  font-size: 16px;
+  margin-bottom: -2rem;
+  padding-bottom: 10px;
+}
+
+.header-text p {
+  color: var(--COLOR-TEXT);
+  font-size: 12px;
+  padding-bottom: 10px;
+}
+
+.btn-secondary{
+  border-radius: 0;
+  padding: 10px;
+  width: 100px;
 }
