@@ -1,5 +1,5 @@
 import React from "react";
-import fp15 from "../Assets/products/fp15.png";
+
 function CategoryCard({ img, name, price }) {
   return (
     <>

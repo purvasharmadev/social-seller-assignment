@@ -96,7 +96,7 @@ function App() {
 
       {/* Brand banner */}
       <div className="v-gutter text-center">
-        <img src={brandBanner} width="650px"/>
+        <img src={brandBanner} alt="banner" width="650px"/>
       </div>
 
       {/* Latest Blog */}
