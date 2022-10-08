@@ -1,6 +1,7 @@
 import "./App.css";
-import { featuredProduct, latestProduct, trendingProduct,blogs } from "./data";
-import brandBanner from './Assets/brandBanner.png'
+import { useState } from "react";
+import { featuredProduct, latestProduct, trendingProduct, blogs } from "./data";
+import brandBanner from "./Assets/brandBanner.png";
 import Nav from "./Components/Nav";
 import Footer from "./Components/Footer";
 import Landing from "./Components/Landing";
@@ -9,8 +10,11 @@ import ProductCard from "./Components/ProductCard";
 import CategoryCard from "./Components/CategoryCard";
 import BlogCard from "./Components/BlogCard";
 
-
 function App() {
+  const [latestProductName, setLatestProductName] = useState("");
+  console.log(
+    latestProduct.filter((item) => item.productInfo === latestProductName)
+  );
   return (
     <div>
       {/* Navbar */}
@@ -36,23 +40,62 @@ function App() {
       {/* Latest Products */}
       <h1 className="text-center color-primary v-gutter">Latest Products</h1>
       <div className="text-center color-primary">
-        <span className="text-small p-1 product-link">New Arrival</span>
-        <span className="text-small p-1 product-link">Best Seller</span>
-        <span className="text-small p-1 product-link">Featured</span>
-        <span className="text-small p-1 product-link">Special Offer</span>
+        <span
+          onClick={() => setLatestProductName("")}
+          className="text-small p-1 product-link"
+        >
+          All
+        </span>
+        <span
+          onClick={() => setLatestProductName("New Arrival")}
+          className="text-small p-1 product-link"
+        >
+          New Arrival
+        </span>
+        <span
+          onClick={() => setLatestProductName("Best Seller")}
+          className="text-small p-1 product-link"
+        >
+          Best Seller
+        </span>
+        <span
+          onClick={() => setLatestProductName("Featured")}
+          className="text-small p-1 product-link"
+        >
+          Featured
+        </span>
+        <span
+          onClick={() => setLatestProductName("Special Offer")}
+          className="text-small p-1 product-link"
+        >
+          Special Offer
+        </span>
       </div>
 
       <div className="flex container flex-wrap">
-        {latestProduct.map((i) => {
-          return (
-            <ProductCard
-              name={i.productName}
-              img={i.productImg}
-              price={i.productPrice}
-              discount={i.discount}
-            />
-          );
-        })}
+        {!latestProductName
+          ? latestProduct.map((i) => {
+              return (
+                <ProductCard
+                  name={i.productName}
+                  img={i.productImg}
+                  price={i.productPrice}
+                  discount={i.discount}
+                />
+              );
+            })
+          : latestProduct
+              .filter((item) => item.productInfo === latestProductName)
+              .map((i) => {
+                return (
+                  <ProductCard
+                    name={i.productName}
+                    img={i.productImg}
+                    price={i.productPrice}
+                    discount={i.discount}
+                  />
+                );
+              })}
       </div>
       {/* Trending Products */}
       <h1 className="text-center color-primary v-gutter">Trending Products</h1>
@@ -89,14 +132,16 @@ function App() {
       {/* NewsLetter */}
       <div className="w-100 flex v-gutter flex-space-center align-item-center container-newsletter">
         <div className="w-50 text-center mt-1">
-          <h2 className="text-md color-primary">Get Leatest Update By Subscribe 0ur Newslater</h2>
+          <h2 className="text-md color-primary">
+            Get Leatest Update By Subscribe 0ur Newslater
+          </h2>
           <button className="btn btn-secondary">Shop Now</button>
         </div>
       </div>
 
       {/* Brand banner */}
       <div className="v-gutter text-center">
-        <img src={brandBanner} alt="banner" width="650px"/>
+        <img src={brandBanner} alt="banner" width="650px" />
       </div>
 
       {/* Latest Blog */}
@@ -116,8 +161,7 @@ function App() {
       </div>
 
       {/* Footer */}
-      <Footer/>
-
+      <Footer />
     </div>
   );
 }

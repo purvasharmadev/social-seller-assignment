@@ -62,15 +62,16 @@ export const latestProduct = [
         productImg:fp5,
         productName:'Cantilever chair',
         productPrice:'42.00',
-        discount:'65.00'
-
+        discount:'65.00',
+        productInfo:'New Arrival'
     },
     {
         productImg:fp6,
         productName:'Cantilever chair',
         productCode:'Y523201',
         productPrice:'42.00',
-        discount:'65.00'
+        discount:'65.00',
+        productInfo:'New Arrival'
 
 
     },
@@ -79,7 +80,8 @@ export const latestProduct = [
         productName:'Cantilever chair',
         productCode:'Y523201',
         productPrice:'42.00',
-        discount:'65.00'
+        discount:'65.00',
+        productInfo:'Best Seller'
 
 
     },
@@ -88,7 +90,8 @@ export const latestProduct = [
         productName:'Cantilever chair',
         productCode:'Y523201',
         productPrice:'42.00',
-        discount:'65.00'
+        discount:'65.00',
+        productInfo:'Best Seller'
 
 
     },
@@ -97,7 +100,10 @@ export const latestProduct = [
         productName:'Cantilever chair',
         productCode:'Y523201',
         productPrice:'42.00',
-        discount:'65.00'
+        discount:'65.00',
+        featured:true,
+        productInfo:'Featured'
+
 
 
     },
@@ -106,7 +112,9 @@ export const latestProduct = [
         productName:'Cantilever chair',
         productCode:'Y523201',
         productPrice:'42.00',
-        discount:'65.00'
+        discount:'65.00',
+        specialOffer:true,
+        productInfo:'Special Offer'
 
 
     },
