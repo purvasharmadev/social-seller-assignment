@@ -24,7 +24,7 @@ body {
 }
 
 .v-gutter{
-  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 /* NavBar */
@@ -129,5 +129,124 @@ header {
 .card-body:hover{
   background-color: var(--PRIMARY-COLOR);
   color: var(--COLOR-BACKGROUND);
+  cursor: pointer;
+}
+
+.product-link:hover{
+  color:var(--SECONDARY-COLOR);
+  border-bottom:2px solid var(--SECONDARY-COLOR);
+  cursor:pointer;
+}
+
+
+.product-card {
+  width: 330px;
+  height: 300px;
+}
+
+.product-card :hover{
+  color: var(--COLOR-TEXT);
+  background-color: white;
+  cursor: pointer;
+}
+
+.discount-price{
+  color: var(--SECONDARY-COLOR);
+  text-decoration:line-through;
+  padding-right: 5px;
+}
+
+/* Category Card */
+
+.category-card{
+  width:260px;
+  height: 260px;
+  border-radius: 50% 50%;
+  background-color: var(--COLOR-BACKGROUND);
+  position:relative;
+
+}
+
+.category-card .category-card-img{
+  top: 15%;
+  bottom: 20%;
+  left: 20%;
+  right: 20%;
+}
+.category-card button{
+  margin-left: 1.6rem;
+}
+.hidden{
+  opacity: 0;
+}
+
+.hidden:hover{
+  opacity: 1;
+  cursor: pointer;
+  background-color: var(--SECONDARY-COLOR);
+}
+.hover-border:hover{
+  border-left:var(--COLOR-TEXT) 5px solid;
+  cursor:pointer
+}
+
+.category-card-text{
+  margin-top: 16.5rem;
+  text-align: center;
+  color: var(--PRIMARY-COLOR);
+}
+.category-card-text h5{
+  margin-bottom: -10px;
+}
+
+.container-newsletter{
+  margin-top: 50px;
+  background-image: url('./Assets/banner.png');
+  height: 350px;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+
+.text-md{
+  font-size: 25px;
+}
+
+.blog-card{
+  width: 350px;
+  height: 500px;
+  text-align: left;
+}
+.blog-card span{
+  margin:0 2rem 0 3px;
+}
+
+.blog-card:hover{
+  color: var(--SECONDARY-COLOR);
+  cursor: pointer;
+}
+
+.blog-card .link:hover{
+  color: var(--SECONDARY-COLOR);
+}
+
+footer{
+  padding: 2rem;
+  background-color: var(--COLOR-BACKGROUND);
+}
+
+
+
+footer ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  color: var(--COLOR-TEXT);
+}
+
+footer ul li{
+  margin-bottom: 10px;
+}
+
+footer ul li:hover{
   cursor: pointer;
 }
